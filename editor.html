@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="style sheet" href="spms.css">    
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="..\Project_1\home.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="..\Project_1\login.html">Logout</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="..\Project1\author.html">Authors</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\Project_1\editor.html">Editors</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Stories by Genre
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">SciFi</a></li>
+                      <li><a class="dropdown-item" href="#">Adventure</a></li>
+                      <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                      <li><a class="dropdown-item" href="#">Mystery</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      </nav>
+   
+    <div onload="fillproposals()">
+        
+        <h1 style="color: aquamarine;">Editor</h1>
+        <div class="container">
+          
+          <!-- <input type="button" class="btn btn-outline-dark" value="Logout" id="logout" onclick="logout()"> -->
+
+          <table style="width:95%" id="proposals" class="table table-dark table-striped">
+              <tr>
+                  <th>Author</th>
+                  <th>Title</th>
+                  <th>Type</th>
+                  <th>Status</th>
+              </tr>
+
+              
+
+              <!-- Filled by fillProposals() -->
+          </table>
+
+          <input type="button" value="Pending Approval" class="btn btn-outline-dark">
+          <input type="button" value="Drafts" class="btn btn-outline-dark">
+          <input type="button" value="Information Requests" class="btn btn-outline-dark">
+      
+    </div>
+    <script src="editor.js"></script>
+    <!--nothing below this script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

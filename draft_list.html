@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Draft Submissions</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="draft_list.js"></script>
+    </head>
+    <body onload="fillTable()">
+        <div id="modal_draft" class="modal">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="row">
+                        <input class="col-md-4" type="button" name="approve" value="Approve" id="approve_button">
+                        <!-- <input class="col-md-3" type="button" name="deny" value="Deny" id="deny_button"> -->
+                        <input class="col-md-4" type="button" name="req_change" value="Request a Change" id="change_button">
+                        <input class="col-md-4" type="button" name="back" value="Back" onclick="closeModal()">
+                    </div>
+
+                    <label for="df_title" class="h2">Title</label>
+                    <h3 class="purple light-grey-background" id="df_title">-</h3>
+    
+                    <label for="df_author_name" class="h4">Author's Name</label>
+                    <h5 class="purple light-grey-background" id="df_author_name">-</h5>
+    
+                    <label for="df_genre" class="h4">Genre</label>
+                    <h5 class="purple light-grey-background" id="df_genre">-</h5>
+    
+                    <label for="df_type" class="h4">Type</label>
+                    <h5 class="purple light-grey-background" id="df_type">-</h5>
+    
+                    <!-- <label for="df_draft" class="h4">Draft</label> -->
+                    <h4 class="green">Draft</h4>
+                    <textarea class="purple light-grey-background" name="df_draft" id="df_draft" cols="30" rows="10">-</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Pending Drafts</h3>
+            <!-- Change onclick to be a "back" button to editor_main -->
+            <input type="button" value="Back" id="back" onclick="listBack()">
+
+            <table style="width:95%" id="table" class="table">
+                <tr class="green purple-background">
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                </tr>
+
+                <!-- Filled by fillTable() -->
+            </table>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Draft Form</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="draft_list.js"></script>
+    </head>
+    <body onload="fillForm()">
+        <!-- Draft Change Request Modal -->
+        <div id="modal_info" class="modal">
+            <div class="modal-content">
+                <input type="button" name="close_info_modal" value="X" id="close_info_modal" onclick="closeInfoModal()">
+                <label for="prompt">What changes would you like the author to make?</label>
+                <textarea name="prompt" id="prompt" cols="30" rows="10"></textarea>
+                <input type="button" name="send_change_request" value="Send" id="send_change_button">
+            </div>
+        </div>
+
+        <div class="container">
+            <input type="button" name="approve" value="Approve" id="approve_button">
+            <input type="button" name="deny" value="Deny" id="deny_button">
+            <input type="button" name="req_change" value="Request a Change" id="change_button">
+            <input type="button" name="back" value="Back" onclick="sfBack()">
+
+            <label for="df_title" class="h2">Title</label>
+            <h3 class="green" id="df_title">-</h3>
+
+            <label for="df_author_name" class="h4">Author's Name</label>
+            <h5 id="df_author_name">-</h5>
+
+            <label for="df_genre" class="h4">Genre</label>
+            <h5 id="df_genre">-</h5>
+
+            <label for="df_type" class="h4">Type</label>
+            <h5 id="df_type">-</h5>
+
+            <label for="df_draft" class="h4">Draft</label>
+            <textarea name="df_draft" id="df_draft" cols="30" rows="10">-</textarea>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

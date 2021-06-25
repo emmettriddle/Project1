@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="style sheet" href="spms.css">  
+    <script src="authorsubform.js"></script>  
+
+</head>
+<body onload="fillDropdowns()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="..\Project_1\home.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="..\Project_1\login.html">Logout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\Project_1\author.html">Authors</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="..\Project1\editor.html">Editors</a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Stories by Genre
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">SciFi</a></li>
+                      <li><a class="dropdown-item" href="#">Adventure</a></li>
+                      <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                      <li><a class="dropdown-item" href="#">Mystery</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      </nav>
+   
+    <div class="wrapup">
+        
+        <h1 style="color: aquamarine;">Author Submission Form</h1>
+
+        <h1 id="sp_title">Story Proposal Form</h1>
+        <form action="submit">
+			<div class="container">
+				<div class="row">
+					<p class="red">Author:</p>
+					<p id="author_name">name</p>
+					<p class="red">Biography:</p>
+					<p id="author_bio">
+						<!-- Filled by .js -->
+					</p>
+				</div>
+	
+				<div class="row">
+					<label for="story_title" class="red">Working Story Title</label>
+					<input type="text" name="story_title" id="story_title">
+				</div>
+	
+				<div class="row">
+					<label for="date" class="red">Initial Completion Date</label>
+					<input type="date" name="date" id="date">
+				</div>
+	
+				<!--bootstrap -->
+				<div class="row">
+					<label for="story_type_select" class="col-md-2">Story Type</label>
+					<select name="story_type_select" id="story_type_select" class="col-md-2">
+						<!-- Filled by .js -->
+					</select>
+					<p id="point_counter" class="col-md-2"></p>
+					<p id="points_available"></p>
+				</div>
+	
+				<div class="row">
+					<label for="genre_select">Genre</label>
+					<select name="genre_select" id="genre_select">
+						<!-- Filled by .js -->
+					</select>
+				</div>
+	
+				<div class="row">
+					<label for="tagline" class="red">Tag Line</label>
+					<input type="text" name="tagline" id="tagline">
+				</div>
+	
+				<div class="row">
+					<label for="description" class="red">Detailed Description</label>
+					<textarea name="description" id="description" cols="30" rows="10"></textarea>
+					
+				</div>
+
+				<div class="row">
+					<input type="button" class="btn btn-outline-dark" name="submit" id="submit_button" value="Submit" onclick="submitForm()">
+				</div>
+			</div>
+		</form>
+
+    </div>
+   
+    <!--nothing below this script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
